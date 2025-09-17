@@ -13,13 +13,13 @@ public class Solution
 
     public string[] Spellchecker(string[] wordList, string[] queries)
     {
-        initializeSetOriginalWords(wordList);
-        initializeMapCaseMismatchWords(wordList);
-        initializeMapVowelMismatchWords(wordList);
-        return createResultsForQueries(wordList, queries);
+        InitializeSetOriginalWords(wordList);
+        InitializeMapCaseMismatchWords(wordList);
+        InitializeMapVowelMismatchWords(wordList);
+        return CreateResultsForQueries(wordList, queries);
     }
 
-    private void initializeSetOriginalWords(string[] wordList)
+    private void InitializeSetOriginalWords(string[] wordList)
     {
         for (int i = 0; i < wordList.Length; ++i)
         {
@@ -27,7 +27,7 @@ public class Solution
         }
     }
 
-    private void initializeMapCaseMismatchWords(string[] wordList)
+    private void InitializeMapCaseMismatchWords(string[] wordList)
     {
         for (int i = 0; i < wordList.Length; ++i)
         {
@@ -39,7 +39,7 @@ public class Solution
         }
     }
 
-    private void initializeMapVowelMismatchWords(string[] wordList)
+    private void InitializeMapVowelMismatchWords(string[] wordList)
     {
         for (int i = 0; i < wordList.Length; ++i)
         {
@@ -51,7 +51,7 @@ public class Solution
         }
     }
 
-    private string[] createResultsForQueries(string[] wordList, string[] queries)
+    private string[] CreateResultsForQueries(string[] wordList, string[] queries)
     {
         string[] resultsForQueries = new string[queries.Length];
 
